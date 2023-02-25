@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  mysql:
+    container_name: stock_db
+    image: mysql/mysql-server:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_ROOT_HOST: "%"
+      MYSQL_DATABASE: "stock"
+      TZ: Asia/Seoul
+    ports:
+      - "3306:3306"
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
