@@ -10,8 +10,8 @@ import java.util.concurrent.CountDownLatch
 import java.util.concurrent.Executors.newFixedThreadPool
 
 @SpringBootTest
-class StockServiceTest(
-  @Autowired private val stockService: StockService,
+class SynchronizedStockServiceTest(
+  @Autowired private val synchronizedStockService: SynchronizedStockService,
   @Autowired private val stockRepository: StockRepository
 ) {
 
@@ -31,7 +31,7 @@ class StockServiceTest(
   fun 재고_테스트() {
     //given
     val id = 1L
-    stockService.decrease(1L, 1L)
+    synchronizedStockService.decrease(1L, 1L)
 
     //when
     val persistStock = stockRepository
@@ -53,7 +53,7 @@ class StockServiceTest(
     for (i in 0 until threadCount) {
       executors.submit {
         try {
-          stockService.decrease(1L, 1L)
+          synchronizedStockService.decrease(1L, 1L)
         } finally {
           // stockService.decrease()의 예외 발생 여부를 떠나 무조건 실행한다
           latch.countDown()

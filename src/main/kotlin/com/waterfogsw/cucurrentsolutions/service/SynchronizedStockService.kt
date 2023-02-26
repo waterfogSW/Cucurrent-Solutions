@@ -4,10 +4,11 @@ import com.waterfogsw.cucurrentsolutions.repository.StockRepository
 import org.springframework.stereotype.Service
 
 @Service
-class StockService(
+class SynchronizedStockService(
   private val stockRepository: StockRepository
 ) {
-  
+
+  @Synchronized
   fun decrease(id: Long, quantity: Long) {
     val persistStock = stockRepository
         .findById(id)
