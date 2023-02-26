@@ -7,10 +7,10 @@ import org.springframework.transaction.annotation.Transactional
 @Service
 class PessimisticLockStockService(
   private val stockRepository: StockRepository
-) {
+) : StockDecreaseCommand {
 
   @Transactional
-  fun decrease(id: Long, quantity: Long) {
+  override fun decrease(id: Long, quantity: Long) {
     val persistStock = stockRepository.findByIdWithPessimisticLock(id)
     persistStock.decrease(quantity)
   }
