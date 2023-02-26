@@ -1,7 +1,7 @@
 package com.waterfogsw.cucurrentsolutions.service
 
 import com.waterfogsw.cucurrentsolutions.domain.Stock
-import com.waterfogsw.cucurrentsolutions.domain.StockRepository
+import com.waterfogsw.cucurrentsolutions.repository.StockRepository
 import com.waterfogsw.cucurrentsolutions.facade.OptimisticLockStockFacade
 import org.assertj.core.api.Assertions
 import org.junit.jupiter.api.*

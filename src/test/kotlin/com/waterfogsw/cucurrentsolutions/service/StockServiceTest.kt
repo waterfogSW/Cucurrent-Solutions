@@ -1,7 +1,7 @@
 package com.waterfogsw.cucurrentsolutions.service
 
 import com.waterfogsw.cucurrentsolutions.domain.Stock
-import com.waterfogsw.cucurrentsolutions.domain.StockRepository
+import com.waterfogsw.cucurrentsolutions.repository.StockRepository
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.*
 import org.springframework.beans.factory.annotation.Autowired

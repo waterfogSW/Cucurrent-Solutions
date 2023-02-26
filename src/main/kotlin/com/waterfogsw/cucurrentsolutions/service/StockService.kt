@@ -1,6 +1,6 @@
 package com.waterfogsw.cucurrentsolutions.service
 
-import com.waterfogsw.cucurrentsolutions.domain.StockRepository
+import com.waterfogsw.cucurrentsolutions.repository.StockRepository
 import org.springframework.stereotype.Service
 
 @Service

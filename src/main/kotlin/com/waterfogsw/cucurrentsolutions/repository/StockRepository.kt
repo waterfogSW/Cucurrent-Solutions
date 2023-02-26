@@ -1,5 +1,6 @@
-package com.waterfogsw.cucurrentsolutions.domain
+package com.waterfogsw.cucurrentsolutions.repository
 
+import com.waterfogsw.cucurrentsolutions.domain.Stock
 import jakarta.persistence.LockModeType
 import org.springframework.data.jpa.repository.*
 
