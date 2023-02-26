@@ -13,3 +13,8 @@ services:
     command:
       - --character-set-server=utf8mb4
       - --collation-server=utf8mb4_unicode_ci
+  redis:
+    container_name: stock_lock_redis
+    image: redis:latest
+    ports:
+      - "6379:6379"
