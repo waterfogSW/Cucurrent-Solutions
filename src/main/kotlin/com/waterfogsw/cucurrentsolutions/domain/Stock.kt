@@ -13,6 +13,15 @@ data class Stock(
 
   var quantity: Long,
 ) {
+
+  fun decrease(quantity: Long) {
+    if (quantity <= 0) {
+      throw RuntimeException("Cannot decrease")
+    }
+
+    this.quantity -= quantity
+  }
+
   override fun equals(other: Any?): Boolean {
     if (this === other) return true
     if (other == null || Hibernate.getClass(this) != Hibernate.getClass(
