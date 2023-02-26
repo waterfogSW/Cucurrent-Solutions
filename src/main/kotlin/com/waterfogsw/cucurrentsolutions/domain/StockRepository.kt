@@ -13,4 +13,10 @@ interface StockRepository : JpaRepository<Stock, Long> {
   @Query("select s from Stock s where s.id = :id")
   fun findByIdWithOptimisticLock(id: Long): Stock
 
+  @Query(value = "select get_lock(:key, 3000)")
+  fun getLock(key: String)
+
+  @Query(value = "select release_lock(:key)")
+  fun releaseLock(key: String)
+
 }
