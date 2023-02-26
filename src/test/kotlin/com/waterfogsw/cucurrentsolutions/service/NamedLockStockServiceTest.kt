@@ -1,7 +1,7 @@
 package com.waterfogsw.cucurrentsolutions.service
 
 import com.waterfogsw.cucurrentsolutions.domain.Stock
-import com.waterfogsw.cucurrentsolutions.domain.StockRepository
+import com.waterfogsw.cucurrentsolutions.repository.StockRepository
 import com.waterfogsw.cucurrentsolutions.facade.NamedLockStockFacade
 import org.assertj.core.api.Assertions
 import org.junit.jupiter.api.*
@@ -12,9 +12,9 @@ import java.util.concurrent.Executors
 
 @SpringBootTest
 class NamedLockStockServiceTest(
-  @Autowired private val namedLockStockFacade: NamedLockStockFacade,
-  @Autowired private val stockRepository: StockRepository
-) {
+  @Autowired val namedLockStockFacade: NamedLockStockFacade,
+  @Autowired val stockRepository: StockRepository
+){
 
   @BeforeEach
   fun setUp() {
