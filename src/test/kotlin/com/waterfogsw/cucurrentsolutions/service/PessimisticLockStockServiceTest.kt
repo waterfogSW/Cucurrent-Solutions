@@ -4,7 +4,6 @@ import com.waterfogsw.cucurrentsolutions.domain.Stock
 import com.waterfogsw.cucurrentsolutions.domain.StockRepository
 import org.assertj.core.api.Assertions
 import org.junit.jupiter.api.*
-import org.junit.jupiter.api.Assertions.*
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import java.util.concurrent.CountDownLatch
