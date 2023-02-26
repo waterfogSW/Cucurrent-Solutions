@@ -12,6 +12,9 @@ data class Stock(
   var productId: Long,
 
   var quantity: Long,
+
+  @Version
+  var version: Long? = null
 ) {
 
   fun decrease(quantity: Long) {
